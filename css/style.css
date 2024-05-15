@@ -1,0 +1,194 @@
+:root {
+    --main-color: #F3FFE1;
+    --add-color: #DFFFD6;
+    --add-hover-color: #b2ffa1;
+    --clear-color: #FFD7D5;
+    --clear-hover-color: #ffb1ad;
+    --check-border-color: #E8D7FF;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+  }
+  
+@font-face {
+    font-family: "itim";
+    src: url("../fonts/Itim-Regular.ttf");
+}
+
+body {
+    background-color: var(--main-color);    
+}
+
+.task-manager {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-manager__title {
+    font-family: "itim" ,sans-serif;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.task-manager__search {
+    width: 290px;
+    background-color: white;
+    border-radius: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.task-manager__search img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.task-manager__search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: "itim";
+    font-size: 20px;
+}
+
+.task-manager__search input::placeholder {
+    font-family: "itim";
+    font-size: 20px;
+}
+
+.task-manager__task {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.task-manager__task li {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding: 10px 20px;  
+    width: 330px;
+    border-radius: 36px;
+    border: None;
+    background-color: white;
+    text-align: left;
+    font-family: "itim";
+    font-size: 20px;
+    gap: 10px;
+    cursor: pointer;
+    height: 40px;
+    position: relative;
+}
+
+.task-manager__task li span {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 100%;
+    position: absolute;
+    right: 5%;
+}
+
+.task-manager__task li span:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+#task-add {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding: 10px 20px;  
+    width: 330px;
+    border-radius: 36px;
+    border: None;
+    background-color: white;
+    text-align: left;
+    font-family: "itim";
+    font-size: 20px;
+    gap: 10px;
+    height: 40px;
+    outline: none;
+}
+
+.task-manager__task input {
+    border: none;
+    outline: none;
+    width: 80%;
+    font-family: "itim";
+    font-size: 20px;
+}
+
+.task-manager__task input::placeholder {
+    font-family: "itim";
+    font-size: 16px;
+}
+
+.task-manager__task li::before {
+    content: '';
+    background-image: url('../assets/checkImg_blank.svg');
+    background-size: contain;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    border: solid 1px var(--check-border-color);
+    border-radius: 5px;
+
+}
+
+.task-manager__task li.checked {
+    color: rgb(151, 151, 151);
+    text-decoration: line-through;
+}
+
+.task-manager__task li.checked::before {
+    content: '';
+    background-image: url('../assets/checkImg.svg');
+    background-size: contain;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    border: solid 1px var(--check-border-color);
+    border-radius: 5px;
+}
+
+.task-manager__manage {
+    display: flex;
+}
+
+.task-manager__manage button {
+    font-family: "itim";
+    font-size: 25px;
+    padding: 20px;
+    width: 150px;
+    border-radius: 36px;
+    border: none;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.task-manager__add {
+    background-color: var(--add-color);
+}
+
+.task-manager__add:hover {
+    background-color: var(--add-hover-color);
+}
+
+.task-manager__clear {
+    background-color: var(--clear-color);
+}
+
+.task-manager__clear:hover {
+    background-color: var(--clear-hover-color);
+}

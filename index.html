@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>to-do-list app</title>
+  </head>
+  <body>
+    <section class="task-manager">
+      <h2 class="task-manager__title">Things to do</h2>
+      <div class="task-manager__search"><input id="search" type="search" placeholder="Search your task.." autocomplete="off"><img src="assets/searchImg.svg" alt="search-image"></div>
+      <ul id="list-container" class="task-manager__task">
+      </ul>
+      <input id="task-add" type="text" placeholder="Add your task.." autocomplete="off"></li>
+
+      <div class="task-manager__manage">
+        <button class="task-manager__add" onclick="addTask()">add</button>
+        <button class="task-manager__clear" onclick="clearTask()">clear</button>
+      </div>
+    </section>
+    
+    <script src="js/script.js"></script>
+  </body>
+</html>
